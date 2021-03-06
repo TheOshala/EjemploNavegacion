@@ -1,11 +1,16 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, SafeAreaView, Image } from 'react-native'
 
+import CustomHeader from '../drawer/CustomHeader'
 
-export default function Muro() {
+export default function Muro({navigation}) {
     return(
-        <View>
-        <Text>Muro...</Text>
-    </View>
+        <SafeAreaView style={{flex: 1}}>
+            <CustomHeader title=" Pantalla Principal"  isHome={true} navigation={navigation}/>
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <Text>Muro - Home</Text>
+            </View>      
+        </SafeAreaView>
     )
 }
+
